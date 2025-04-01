@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Button</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+</head>
+<body>
+    <nav>
+        <div class="h-20 bg-amber-600 text-white text-center flex  justify-center items-center underline space-x-5">
+            <p>Home</p>
+            <p>about us</p>
+            <p id="con">Contact us</p>
+        </div>
+        <div class="flex flex-col items-center justify-center h-40 bg-gradient-to-r from-red-300 to-orange-300 p-6 w-100 hidden">
+            <form action="">
+             
+                <label for="">Enter your name: </label>
+                <input type="text" placeholder="Enter your name">
+
+                <button type="button" class="rounded-3xl border-2 p-4">Submit</button>
+               
+            </form>
+        </div>
+    </nav>
+    
+</body>
+    <script>
+        const con = document.getElementById('con');
+        const form = document.querySelector('form');
+        con.addEventListener('click', function() {
+            if(form.parentElement.classList.contains('hidden')){
+                form.parentElement.classList.remove('hidden');
+            }
+            else{
+                form.parentElement.classList.add('hidden');
+            } 
+        });
+    </script>
+</html>
